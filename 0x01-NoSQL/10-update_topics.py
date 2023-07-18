@@ -5,5 +5,5 @@ import pymongo
 
 def update_topics(mongo_collection, name, topics):
     """a fumction that updates a document"""
-    return mongo_collection.update({"name": name},
+    return mongo_collection.update_many({"name": name},
                                    {$set: {"topics": topics}})
